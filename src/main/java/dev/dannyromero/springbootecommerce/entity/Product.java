@@ -20,9 +20,6 @@ public class Product {
     @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
 
-    @Column(name = "sku")
-    private String sku;
-
     @Column(name = "name")
     private String name;
 
@@ -34,9 +31,6 @@ public class Product {
 
     @Column(name = "image_url")
     private String imageUrl;
-
-    @Column(name = "active")
-    private boolean active;
 
     @Column(name = "units_in_stock")
     private int unitsInStock;
@@ -63,14 +57,6 @@ public class Product {
 
     public void setCategory(ProductCategory category) {
         this.category = category;
-    }
-
-    public String getSku() {
-        return sku;
-    }
-
-    public void setSku(String sku) {
-        this.sku = sku;
     }
 
     public String getName() {
@@ -103,14 +89,6 @@ public class Product {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
     }
 
     public int getUnitsInStock() {

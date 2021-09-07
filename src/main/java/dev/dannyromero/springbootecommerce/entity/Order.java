@@ -27,9 +27,6 @@ public class Order {
     @Column(name = "total_price")
     private BigDecimal totalPrice;
 
-    @Column(name = "status")
-    private String status;
-
     @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
@@ -92,14 +89,6 @@ public class Order {
 
     public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public Date getDateCreated() {
