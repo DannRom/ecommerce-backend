@@ -2,10 +2,10 @@ package dev.dannyromero.springbootecommerce.dto;
 
 import java.util.Objects;
 
-public class PurchaseResponse {
+public class Response {
     private final String orderTrackingNumber;
 
-    public PurchaseResponse(String orderTrackingNumber) {
+    public Response(String orderTrackingNumber) {
         this.orderTrackingNumber = orderTrackingNumber;
     }
 
@@ -16,8 +16,8 @@ public class PurchaseResponse {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PurchaseResponse)) return false;
-        PurchaseResponse that = (PurchaseResponse) o;
+        if (!(o instanceof Response)) return false;
+        Response that = (Response) o;
         return Objects.equals(getOrderTrackingNumber(), that.getOrderTrackingNumber());
     }
 

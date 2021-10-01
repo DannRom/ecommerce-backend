@@ -2,7 +2,7 @@ package dev.dannyromero.springbootecommerce.controller;
 
 import dev.dannyromero.springbootecommerce.dao.CustomerRepository;
 import dev.dannyromero.springbootecommerce.dto.Purchase;
-import dev.dannyromero.springbootecommerce.dto.PurchaseResponse;
+import dev.dannyromero.springbootecommerce.dto.Response;
 import dev.dannyromero.springbootecommerce.entity.Customer;
 import dev.dannyromero.springbootecommerce.entity.Order;
 import dev.dannyromero.springbootecommerce.entity.OrderItem;
@@ -25,7 +25,7 @@ public class CheckoutController {
 
     @PostMapping("/purchase")
     @Transactional
-    public PurchaseResponse placeOrder(@RequestBody Purchase purchase) {
+    public Response placeOrder(@RequestBody Purchase purchase) {
         Order order = purchase.getOrder();
 
         String orderTrackingNumber = UUID.randomUUID().toString();
@@ -41,7 +41,7 @@ public class CheckoutController {
         customer.add(order);
 
         customerRepository.save(customer);
-        return new PurchaseResponse(orderTrackingNumber);
+        return new Response(orderTrackingNumber);
     }
 
 }
