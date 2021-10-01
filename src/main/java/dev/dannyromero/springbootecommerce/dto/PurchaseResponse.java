@@ -3,7 +3,7 @@ package dev.dannyromero.springbootecommerce.dto;
 import java.util.Objects;
 
 public class PurchaseResponse {
-    private String orderTrackingNumber;
+    private final String orderTrackingNumber;
 
     public PurchaseResponse(String orderTrackingNumber) {
         this.orderTrackingNumber = orderTrackingNumber;
@@ -11,10 +11,6 @@ public class PurchaseResponse {
 
     public String getOrderTrackingNumber() {
         return orderTrackingNumber;
-    }
-
-    public void setOrderTrackingNumber(String orderTrackingNumber) {
-        this.orderTrackingNumber = orderTrackingNumber;
     }
 
     @Override
