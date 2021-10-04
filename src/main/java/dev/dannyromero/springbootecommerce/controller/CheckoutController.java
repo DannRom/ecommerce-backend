@@ -1,8 +1,8 @@
 package dev.dannyromero.springbootecommerce.controller;
 
 import dev.dannyromero.springbootecommerce.dao.CustomerRepository;
-import dev.dannyromero.springbootecommerce.dto.Purchase;
 import dev.dannyromero.springbootecommerce.dto.Response;
+import dev.dannyromero.springbootecommerce.dto.Transaction;
 import dev.dannyromero.springbootecommerce.entity.Customer;
 import dev.dannyromero.springbootecommerce.entity.Order;
 import dev.dannyromero.springbootecommerce.entity.OrderItem;
@@ -23,21 +23,21 @@ public class CheckoutController {
         this.customerRepository = customerRepository;
     }
 
-    @PostMapping("/purchase")
+    @PostMapping("/transaction")
     @Transactional
-    public Response placeOrder(@RequestBody Purchase purchase) {
-        Order order = purchase.getOrder();
+    public Response placeOrder(@RequestBody Transaction transaction) {
+        Order order = transaction.getOrder();
 
         String orderTrackingNumber = UUID.randomUUID().toString();
         order.setOrderTrackingNumber(orderTrackingNumber);
 
-        Set<OrderItem> orderItems = purchase.getOrderItems();
+        Set<OrderItem> orderItems = transaction.getOrderItems();
         orderItems.forEach(order::add);
 
-        order.setBillingAddress(purchase.getBillingAddress());
-        order.setShippingAddress(purchase.getShippingAddress());
+        order.setBillingAddress(transaction.getBillingAddress());
+        order.setShippingAddress(transaction.getShippingAddress());
 
-        Customer customer = purchase.getCustomer();
+        Customer customer = transaction.getCustomer();
         customer.add(order);
 
         customerRepository.save(customer);

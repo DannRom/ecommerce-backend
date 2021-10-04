@@ -17,8 +17,8 @@ public class Response {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Response)) return false;
-        Response that = (Response) o;
-        return Objects.equals(getOrderTrackingNumber(), that.getOrderTrackingNumber());
+        Response response = (Response) o;
+        return Objects.equals(getOrderTrackingNumber(), response.getOrderTrackingNumber());
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Response {
 
     @Override
     public String toString() {
-        return "PurchaseResponse{" +
+        return "Response{" +
                 "orderTrackingNumber='" + orderTrackingNumber + '\'' +
                 '}';
     }
