@@ -1,4 +1,4 @@
-package dev.dannyromero.springbootecommerce.dto;
+package dev.dannyromero.ecommercebackend.dto;
 
 import java.util.Objects;
 

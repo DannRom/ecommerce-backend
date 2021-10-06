@@ -1,6 +1,6 @@
-package dev.dannyromero.springbootecommerce.dao;
+package dev.dannyromero.ecommercebackend.dao;
 
-import dev.dannyromero.springbootecommerce.entity.ProductCategory;
+import dev.dannyromero.ecommercebackend.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;

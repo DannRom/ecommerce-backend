@@ -1,9 +1,9 @@
-package dev.dannyromero.springbootecommerce.dto;
+package dev.dannyromero.ecommercebackend.dto;
 
-import dev.dannyromero.springbootecommerce.entity.Address;
-import dev.dannyromero.springbootecommerce.entity.Customer;
-import dev.dannyromero.springbootecommerce.entity.Order;
-import dev.dannyromero.springbootecommerce.entity.OrderItem;
+import dev.dannyromero.ecommercebackend.entity.Address;
+import dev.dannyromero.ecommercebackend.entity.Customer;
+import dev.dannyromero.ecommercebackend.entity.Order;
+import dev.dannyromero.ecommercebackend.entity.OrderItem;
 
 import java.util.Objects;
 import java.util.Set;

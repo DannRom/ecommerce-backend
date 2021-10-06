@@ -1,4 +1,4 @@
-package dev.dannyromero.springbootecommerce.entity;
+package dev.dannyromero.ecommercebackend.entity;
 
 import javax.persistence.*;
 import java.util.Set;

@@ -1,11 +1,11 @@
-package dev.dannyromero.springbootecommerce.controller;
+package dev.dannyromero.ecommercebackend.controller;
 
-import dev.dannyromero.springbootecommerce.dao.CustomerRepository;
-import dev.dannyromero.springbootecommerce.dto.Response;
-import dev.dannyromero.springbootecommerce.dto.Transaction;
-import dev.dannyromero.springbootecommerce.entity.Customer;
-import dev.dannyromero.springbootecommerce.entity.Order;
-import dev.dannyromero.springbootecommerce.entity.OrderItem;
+import dev.dannyromero.ecommercebackend.dao.CustomerRepository;
+import dev.dannyromero.ecommercebackend.dto.Response;
+import dev.dannyromero.ecommercebackend.dto.Transaction;
+import dev.dannyromero.ecommercebackend.entity.Customer;
+import dev.dannyromero.ecommercebackend.entity.Order;
+import dev.dannyromero.ecommercebackend.entity.OrderItem;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;

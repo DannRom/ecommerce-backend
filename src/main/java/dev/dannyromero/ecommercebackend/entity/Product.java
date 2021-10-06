@@ -1,4 +1,4 @@
-package dev.dannyromero.springbootecommerce.entity;
+package dev.dannyromero.ecommercebackend.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

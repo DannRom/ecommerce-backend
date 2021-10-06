@@ -1,6 +1,6 @@
-package dev.dannyromero.springbootecommerce.dao;
+package dev.dannyromero.ecommercebackend.dao;
 
-import dev.dannyromero.springbootecommerce.entity.Product;
+import dev.dannyromero.ecommercebackend.entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

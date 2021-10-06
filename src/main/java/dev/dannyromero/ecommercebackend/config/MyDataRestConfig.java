@@ -1,7 +1,7 @@
-package dev.dannyromero.springbootecommerce.config;
+package dev.dannyromero.ecommercebackend.config;
 
-import dev.dannyromero.springbootecommerce.entity.Product;
-import dev.dannyromero.springbootecommerce.entity.ProductCategory;
+import dev.dannyromero.ecommercebackend.entity.Product;
+import dev.dannyromero.ecommercebackend.entity.ProductCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
