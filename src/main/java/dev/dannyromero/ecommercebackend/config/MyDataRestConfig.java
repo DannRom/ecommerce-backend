@@ -18,7 +18,7 @@ import java.util.Set;
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
 
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     @Autowired
     public MyDataRestConfig(EntityManager theEntityManager) {
@@ -27,19 +27,19 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-        HttpMethod[] theUnsupportedActions = {HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
+        HttpMethod[] actions = {HttpMethod.POST, HttpMethod.PUT, HttpMethod.DELETE};
 
         // Disable POST, PUT, DELETE HTTP Methods for Product class
         config.getExposureConfiguration()
                 .forDomainType(Product.class)
-                .withItemExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
-                .withCollectionExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)));
+                .withItemExposure(((metadata, httpMethods) -> httpMethods.disable(actions)))
+                .withCollectionExposure(((metadata, httpMethods) -> httpMethods.disable(actions)));
 
         // Disable POST, PUT, DELETE HTTP Methods for ProductCategory class
         config.getExposureConfiguration()
                 .forDomainType(ProductCategory.class)
-                .withItemExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)))
-                .withCollectionExposure(((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions)));
+                .withItemExposure(((metadata, httpMethods) -> httpMethods.disable(actions)))
+                .withCollectionExposure(((metadata, httpMethods) -> httpMethods.disable(actions)));
 
         exposeIds(config);
     }
